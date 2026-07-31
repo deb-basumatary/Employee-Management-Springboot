@@ -1,0 +1,22 @@
+package deborshi.employee_management.repositories;
+
+import deborshi.employee_management.entities.EmployeeEntitiy;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface EmployeeRepository extends JpaRepository<EmployeeEntitiy, Long> {
+
+    Optional<EmployeeEntitiy> findById(long id);
+
+    List<EmployeeEntitiy> findAll();
+
+    EmployeeEntitiy save();
+
+    Boolean deleteById(long id);
+
+
+}
