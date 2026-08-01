@@ -10,13 +10,5 @@ import java.util.Optional;
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeEntitiy, Long> {
 
-    Optional<EmployeeEntitiy> findById(long id);
-
-    List<EmployeeEntitiy> findAll();
-
-    EmployeeEntitiy save();
-
-    Boolean deleteById(long id);
-
 
 }

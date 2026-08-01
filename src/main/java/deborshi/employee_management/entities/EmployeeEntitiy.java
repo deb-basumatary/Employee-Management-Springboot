@@ -2,6 +2,8 @@ package deborshi.employee_management.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -15,19 +17,19 @@ public class EmployeeEntitiy {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(nullable = false, length = 255)
     private String name;
 
-    @Column(name = "date_of_birth", nullable = false)
+    @Column(nullable = false)
     private LocalDate dob;
 
     @Column(nullable = false, unique = true)
     private String email;
 
     @Column(nullable = true)
-    private Double salary;
+    private BigDecimal salary;
 
 
 }
